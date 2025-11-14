@@ -9,27 +9,28 @@
   body {
     margin: 0;
     padding: 40px;
-    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    background: #ffffff;
     font-family: "Inter", sans-serif;
-    color: #fff;
+    color: #333;
   }
 
   .calculator {
     max-width: 450px;
     margin: auto;
     background: #ffffff;
-    color: #333;
     padding: 35px;
     border-radius: 18px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
-    animation: fadeIn 0.9s ease forwards;
+    border: 2px solid #ff8800;
+    box-shadow: 0 8px 28px rgba(255, 136, 0, 0.25);
+    animation: fadeIn 0.7s ease forwards;
   }
 
   h2 {
     text-align: center;
-    margin-top: 0;
     font-size: 26px;
-    color: #3b82f6;
+    margin-top: 0;
+    color: #ff8800;
+    font-weight: 700;
   }
 
   label {
@@ -37,38 +38,40 @@
     margin-top: 20px;
     font-weight: 600;
     margin-bottom: 6px;
+    font-size: 16px;
   }
 
   input {
     width: 100%;
     padding: 14px;
     border-radius: 10px;
-    border: 2px solid #d6d6d6;
+    border: 2px solid #e0e0e0;
     font-size: 16px;
-    transition: 0.3s ease;
+    transition: 0.25s ease;
   }
 
   input:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+    border-color: #ff8800;
+    box-shadow: 0 0 8px rgba(255, 136, 0, 0.4);
     outline: none;
   }
 
   button {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 28px;
     padding: 15px;
     font-size: 18px;
     border: none;
     border-radius: 12px;
-    background: #3b82f6;
+    background: #ff8800;
     color: white;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.25s ease;
+    font-weight: 600;
   }
 
   button:hover {
-    background: #2563eb;
+    background: #e67600;
     transform: translateY(-2px);
   }
 
@@ -79,8 +82,8 @@
     text-align: center;
     opacity: 0;
     transform: translateY(10px);
-    transition: 0.4s ease;
-    color: #111;
+    transition: 0.35s ease;
+    color: #ff8800;
   }
 
   .result.show {
@@ -132,3 +135,4 @@ function calculateRevenue() {
 
 </body>
 </html>
+
