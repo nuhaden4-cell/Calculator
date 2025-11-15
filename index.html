@@ -92,6 +92,49 @@
         opacity: 0;
         animation: fadeIn 0.5s ease forwards;
     }
+
+    .after-text {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-top: 15px;
+        opacity: 0;
+        animation: fadeIn 0.6s ease forwards;
+    }
+
+    .spots-left {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 800;
+        color: #ff7b00;
+        margin-top: 10px;
+        opacity: 0;
+        animation: fadeIn 0.7s ease forwards;
+    }
+
+    .cta-btn {
+        display: block;
+        margin: 20px auto 0 auto;
+        text-align: center;
+        padding: 14px 20px;
+        background: #ff7b00;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 12px;
+        font-weight: bold;
+        transition: 0.25s;
+        width: 100%;
+        box-shadow: 0 5px 18px rgba(255,136,0,0.35);
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards;
+    }
+
+    .cta-btn:hover {
+        background: #ff8800;
+        transform: scale(1.03);
+    }
 </style>
 </head>
 
@@ -109,6 +152,9 @@
     <button onclick="calculateLoss()">Calculate Revenue Lost</button>
 
     <div id="result" class="result"></div>
+    <div id="afterText" class="after-text"></div>
+    <div id="spotsLeft" class="spots-left"></div>
+    <a id="ctaBtn" class="cta-btn" href="https://app.acuityscheduling.com/schedule.php?owner=37481639" target="_blank" style="display:none;">BOOK HERE FOR YOUR FREE DEMO</a>
 </div>
 
 <script>
@@ -122,8 +168,17 @@ function calculateLoss() {
     }
 
     let total = calls * avg;
-    document.getElementById("result").innerHTML =
-        "Total Revenue Lost: $" + total.toLocaleString();
+    document.getElementById("result").innerHTML = "Total Revenue Lost: $" + total.toLocaleString();
+
+    document.getElementById("afterText").style.opacity = "1";
+    document.getElementById("afterText").innerHTML = "Our AI Growth Systems Help Put That Into Your Business Without You Lifting A Finger";
+
+    document.getElementById("spotsLeft").style.opacity = "1";
+    document.getElementById("spotsLeft").innerHTML = "ONLY 3 SPOTS LEFT THIS MONTH";
+
+    let cta = document.getElementById("ctaBtn");
+    cta.style.display = "block";
+    cta.style.opacity = "1";
 }
 </script>
 
